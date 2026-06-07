@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">YN.</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="btn-outline" href="assets/cv.pdf" target="_blank">Download CV</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-tag">BSc Undergraduate · Class of 2026</div>
+    <h1 class="hero-title">
+      <span class="line">YOUR</span>
+      <span class="line accent">NAME</span>
+    </h1>
+    <p class="hero-sub">I build things at the intersection of <em>science</em> and <em>code</em>. Currently studying at University of Colombo.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">See My Work</a>
+      <a href="#contact" class="btn-ghost">Get In Touch</a>
+    </div>
+    <div class="hero-scroll-hint">scroll ↓</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="section-label">01 / About</div>
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <div class="about-img-placeholder">
+          <!-- Replace with: <img src="assets/photo.jpg" alt="Your Name" /> -->
+          <span>Your Photo</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <h2>A little about me</h2>
+        <p>Hi! I'm <strong>Your Name</strong>, a third-year BSc student majoring in <strong>Computer Science</strong> (or your field). I'm passionate about solving real-world problems using data, algorithms, and creative thinking.</p>
+        <p>Outside academics, I enjoy contributing to open-source projects, competing in hackathons, and mentoring junior students in my department's coding club.</p>
+        <div class="about-facts">
+          <div class="fact"><span class="fact-num">12+</span><span class="fact-label">Projects</span></div>
+          <div class="fact"><span class="fact-num">3</span><span class="fact-label">Internships</span></div>
+          <div class="fact"><span class="fact-num">2</span><span class="fact-label">Awards</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="section-label">02 / Projects</div>
+    <h2>Selected Work</h2>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-num">01</div>
+        <div class="project-tags"><span>Python</span><span>ML</span></div>
+        <h3>Disease Prediction Model</h3>
+        <p>Built a machine learning classifier to predict early-stage diabetes using patient health metrics. Achieved 91% accuracy using XGBoost with cross-validation.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">GitHub →</a>
+          <a href="#" target="_blank">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">02</div>
+        <div class="project-tags"><span>React</span><span>Node.js</span></div>
+        <h3>Student Timetable App</h3>
+        <p>A full-stack web app that helps students manage their schedules, track assignments, and get deadline reminders. Used by 200+ students at my faculty.</p>
+        <div class="project-links">
+          <a href="#" target="_blank">GitHub →</a>
+          <a href="#" target="_blank">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-num">03</div>
+        <div class="project-tags"><span>Research</span><span>Data Analysis</span></div>
+        <h3>Final Year Research</h3>
+        <p>Investigating the impact of [your topic] using statistical methods and visualisation. Supervised by Dr. [Supervisor Name]. Submitted to [Journal/Conference].</p>
+        <div class="project-links">
+          <a href="#" target="_blank">Read Paper →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills section" id="skills">
+    <div class="section-label">03 / Skills</div>
+    <h2>What I Work With</h2>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h4>Languages</h4>
+        <ul>
+          <li>Python</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Frameworks & Tools</h4>
+        <ul>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>Pandas / NumPy</li>
+          <li>TensorFlow</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Platforms</h4>
+        <ul>
+          <li>Git & GitHub</li>
+          <li>Linux</li>
+          <li>Docker</li>
+          <li>Firebase</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <h4>Soft Skills</h4>
+        <ul>
+          <li>Team Collaboration</li>
+          <li>Technical Writing</li>
+          <li>Problem Solving</li>
+          <li>Public Speaking</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="section-label">04 / Contact</div>
+    <h2>Let's Connect</h2>
+    <p class="contact-sub">Whether it's an internship, collaboration, or just a chat — I'm always open.</p>
+    <a href="mailto:your@email.com" class="contact-email">your@email.com</a>
+    <div class="social-links">
+      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>Designed & built by Your Name · 2026</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
