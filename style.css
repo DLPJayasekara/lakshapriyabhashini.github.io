@@ -181,6 +181,7 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 .section h2 {
   font-family: var(--font-head);
@@ -188,6 +189,7 @@ img { max-width: 100%; display: block; }
   letter-spacing: 0.03em;
   margin-bottom: 3rem;
   line-height: 1;
+  text-align: center;
 }
 
 /* ==========================================
@@ -219,6 +221,9 @@ img { max-width: 100%; display: block; }
   height: 100%;
   object-fit: cover;
 }
+}
+.about-text h2 {
+  text-align: left;
 }
 .about-text p {
   color: var(--muted);
