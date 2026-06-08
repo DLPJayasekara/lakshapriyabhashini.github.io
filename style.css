@@ -681,3 +681,28 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) {
   .education-list { grid-template-columns: 1fr; }
 }
+
+/* ==========================================
+   CERTIFICATE LINKS
+   ========================================== */
+.cert-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+.cert-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(181,123,238,0.4);
+  padding-bottom: 0.1rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+.cert-link:hover {
+  color: var(--text);
+  border-color: var(--text);
+}
