@@ -511,3 +511,11 @@ img { max-width: 100%; display: block; }
   .langcomp-grid { gap: 2.5rem; }
   .circle-wrap { width: 110px; height: 110px; }
 }
+
+/* Tilt cards need this for smooth 3D effect */
+.project-card,
+.profdev-card,
+.edu-card {
+  will-change: transform;
+  transform-style: preserve-3d;
+}
