@@ -519,3 +519,55 @@ img { max-width: 100%; display: block; }
   will-change: transform;
   transform-style: preserve-3d;
 }
+
+/* ==========================================
+   GLOWING CURSOR
+   ========================================== */
+* { cursor: none; }
+
+.cursor-glow {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181,123,238,0.35) 0%, rgba(181,123,238,0) 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease;
+}
+.cursor-glow.cursor-expand {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(181,123,238,0.25) 0%, rgba(181,123,238,0) 70%);
+}
+.cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transition: opacity 0.3s ease, transform 0.15s ease;
+}
+.cursor-dot.cursor-dot-hide {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* ==========================================
+   PROGRESS BAR
+   ========================================== */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  z-index: 9998;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 8px rgba(181,123,238,0.6);
+}

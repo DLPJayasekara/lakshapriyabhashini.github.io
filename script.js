@@ -127,3 +127,59 @@ tiltCards.forEach(card => {
     card.style.transition = 'transform 0.5s ease';
   });
 });
+
+// --- Glowing Cursor ---
+const cursor = document.createElement('div');
+cursor.classList.add('cursor-glow');
+document.body.appendChild(cursor);
+
+const cursorDot = document.createElement('div');
+cursorDot.classList.add('cursor-dot');
+document.body.appendChild(cursorDot);
+
+let mouseX = 0, mouseY = 0;
+let cursorX = 0, cursorY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+
+  // Dot follows instantly
+  cursorDot.style.left = mouseX + 'px';
+  cursorDot.style.top = mouseY + 'px';
+});
+
+// Glow follows smoothly with lag
+function animateCursor() {
+  cursorX += (mouseX - cursorX) * 0.1;
+  cursorY += (mouseY - cursorY) * 0.1;
+  cursor.style.left = cursorX + 'px';
+  cursor.style.top = cursorY + 'px';
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Grow on hovering links and cards
+const hoverEls = document.querySelectorAll('a, button, .project-card, .profdev-card, .edu-card, .langcomp-card');
+hoverEls.forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursor-expand');
+    cursorDot.classList.add('cursor-dot-hide');
+  });
+  el.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursor-expand');
+    cursorDot.classList.remove('cursor-dot-hide');
+  });
+});
+
+// --- Page Progress Bar ---
+const progressBar = document.createElement('div');
+progressBar.classList.add('progress-bar');
+document.body.appendChild(progressBar);
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  progressBar.style.width = progress + '%';
+});
