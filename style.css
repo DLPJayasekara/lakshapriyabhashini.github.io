@@ -10,8 +10,8 @@
   --border:    #2a2a2a;
   --text:      #e8e3da;
   --muted:     #7a7670;
-  --accent:    #c8f060;   /* lime green — change to your colour */
-  --accent2:   #f0b860;   /* warm amber highlight */
+  --accent:    #b57bee; /*light-purple*/
+  --accent2:   #d4a8f5;  /* warm amber highlight */
   --font-head: 'Bebas Neue', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   --max-w:     1100px;
@@ -200,6 +200,12 @@ img { max-width: 100%; display: block; }
   align-items: start;
 }
 .about-img-placeholder {
+  .about-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
   aspect-ratio: 3/4;
   background: var(--surface);
   border: 1px solid var(--border);
