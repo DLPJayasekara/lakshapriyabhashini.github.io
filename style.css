@@ -427,3 +427,82 @@ img { max-width: 100%; display: block; }
   .about-facts { gap: 2rem; }
   .projects-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================
+   LANGUAGE COMPETENCY
+   ========================================== */
+.langcomp { text-align: center; }
+.langcomp-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 480px;
+  margin: -1.5rem auto 3rem;
+}
+.langcomp-grid {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.langcomp-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.circle-wrap {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+.circle-bg {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 8;
+}
+.circle-fill {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.4s ease;
+}
+.circle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-head);
+  font-size: 1.8rem;
+  color: var(--text);
+  letter-spacing: 0.03em;
+}
+.langcomp-card h3 {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+}
+.langcomp-card p {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Animate on scroll */
+.circle-fill.animate {
+  animation: drawCircle 1.4s ease forwards;
+}
+@keyframes drawCircle {
+  from { stroke-dashoffset: 314; }
+}
+
+@media (max-width: 768px) {
+  .langcomp-grid { gap: 2.5rem; }
+  .circle-wrap { width: 110px; height: 110px; }
+}

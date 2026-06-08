@@ -54,3 +54,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelectorAll('.project-card').forEach((card, i) => {
   card.style.transitionDelay = `${i * 0.1}s`;
 });
+
+// --- Language circle animation on scroll ---
+const circles = document.querySelectorAll('.circle-fill');
+const circleObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.transition = 'stroke-dashoffset 1.4s ease';
+        entry.target.classList.add('animate');
+        circleObserver.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.3 }
+);
+circles.forEach(c => circleObserver.observe(c));
